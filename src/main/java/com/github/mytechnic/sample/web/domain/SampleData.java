@@ -1,8 +1,6 @@
 package com.github.mytechnic.sample.web.domain;
 
-import com.github.mytechnic.doc.annotation.StarSampleHeader;
-import com.github.mytechnic.doc.annotation.StarSampleRequest;
-import com.github.mytechnic.doc.annotation.StarSampleResponse;
+import com.github.mytechnic.doc.domain.result.ApiSample;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,9 +12,9 @@ import lombok.ToString;
 @ToString
 public class SampleData {
 
-    public static class sample1 {
+    public static class sample1 implements ApiSample {
 
-        @StarSampleHeader
+        @Override
         public SampleRequest header() {
 
             SampleRequest sample = new SampleRequest();
@@ -25,7 +23,7 @@ public class SampleData {
             return sample;
         }
 
-        @StarSampleRequest
+        @Override
         public SampleRequest request() {
 
             SampleRequest sample = new SampleRequest();
@@ -34,7 +32,7 @@ public class SampleData {
             return sample;
         }
 
-        @StarSampleResponse
+        @Override
         public SampleResponse<?> response() {
 
             SampleResponse<?> sample = new SampleResponse<>();

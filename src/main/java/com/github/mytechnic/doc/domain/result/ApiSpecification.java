@@ -25,4 +25,5 @@ public class ApiSpecification {
     private List<ApiParameter> params;
     private ApiBodyType bodyType;
     private ApiBody body;
+    private List<ApiSample> samples;
 }
